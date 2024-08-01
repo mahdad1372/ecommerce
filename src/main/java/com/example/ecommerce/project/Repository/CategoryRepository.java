@@ -1,4 +1,5 @@
 package com.example.ecommerce.project.Repository;
+import com.example.ecommerce.project.Entity.Categories;
 import com.example.ecommerce.project.Entity.Users;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -7,9 +8,9 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface UserRepository extends JpaRepository<Users,Integer> {
-    @Query(value = "SELECT s FROM Users s")
-    public List<Users> getAllUsers();
+public interface CategoryRepository extends JpaRepository<Categories,Integer> {
+    @Query(value = "SELECT s FROM Categories s")
+    public List<Users> getAllCategories();
 
 
     @Modifying
