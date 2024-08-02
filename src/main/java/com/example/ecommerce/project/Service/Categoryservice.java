@@ -18,4 +18,14 @@ public class Categoryservice {
     public List<Categories> getCategoryById(Integer id){
         return categoryRepository.getCategoriesByCategory_id(id);
     }
+    public void deletecategorybyId(Integer id){
+        categoryRepository.deleteCategoriesByid(id);
+    }
+    public void updatcategoryById(Integer id,String name){
+        categoryRepository.updatecategorybyId(id,name);
+    }
+
+    public void addCategory(String name,String description){
+        categoryRepository.addcategory(name,description);
+    }
 }

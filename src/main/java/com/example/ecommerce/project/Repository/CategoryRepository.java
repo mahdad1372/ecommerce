@@ -14,12 +14,12 @@ public interface CategoryRepository extends JpaRepository<Categories,Integer> {
     public List<Categories> getAllCategories();
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM Categories WHERE category_id = :id")
+    @Query(value = "DELETE FROM Categories WHERE category_id =?1")
     public void deleteCategoriesByid(Integer id);
     @Modifying
     @Transactional
     @Query(value = "UPDATE Categories SET name=?2 WHERE category_id = ?1")
-    public void updateUserById(Integer id,String name);
+    public void updatecategorybyId(Integer id,String name);
 
     @Query(value="SELECT * FROM Categories a WHERE a.category_id=:id", nativeQuery=true)
     List<Categories> getCategoriesByCategory_id(@Param("id") Integer id);
@@ -27,7 +27,7 @@ public interface CategoryRepository extends JpaRepository<Categories,Integer> {
     @Transactional
     @Query(
             value =
-                    "INSERT INTO Categories (category_id,name,description) values (?1,?2,?3)",
+                    "INSERT INTO Categories (name,description) values (?1,?2)",
             nativeQuery = true)
-    void addUser(Integer category_id,String name,String description);
+    void addcategory(String name,String description);
 }
