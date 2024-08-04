@@ -19,8 +19,8 @@ public interface OrderRepository extends JpaRepository<Orders,Integer> {
 
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM Orders WHERE order_id = :id")
-    public void deleteOrderByOrderId(Integer id);
+    @Query(value = "DELETE FROM Orders WHERE order_id = ?1")
+    public void deleteOrderByOrderId(@Param("id") Integer id);
     @Modifying
     @Transactional
     @Query(value = "UPDATE Orders SET status=?2 WHERE order_id = ?1")

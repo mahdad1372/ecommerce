@@ -22,7 +22,7 @@ public class Orders {
     @Column(name = "order_id")
     private Integer order_id;
     @Column(name = "user_id")
-    private String user_id;
+    private Integer user_id;
     @Column(name = "total_amount")
     private Integer total_amount;
     @Column(name = "status")
@@ -36,7 +36,7 @@ public class Orders {
         return order_id;
     }
 
-    public String getUser_id() {
+    public Integer getUser_id() {
         return user_id;
     }
 
