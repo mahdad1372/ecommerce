@@ -1,7 +1,6 @@
 package com.example.ecommerce.project.Controller;
 
 import com.example.ecommerce.project.Entity.OrderItem;
-import com.example.ecommerce.project.Entity.Orders;
 import com.example.ecommerce.project.Service.OrderItemservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

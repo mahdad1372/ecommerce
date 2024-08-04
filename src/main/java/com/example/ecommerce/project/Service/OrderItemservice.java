@@ -1,9 +1,6 @@
 package com.example.ecommerce.project.Service;
-
 import com.example.ecommerce.project.Entity.OrderItem;
-import com.example.ecommerce.project.Entity.Orders;
 import com.example.ecommerce.project.Repository.OrderItemRepository;
-import com.example.ecommerce.project.Repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
