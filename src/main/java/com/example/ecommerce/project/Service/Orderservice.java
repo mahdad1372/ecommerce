@@ -22,6 +22,9 @@ public class Orderservice {
     public void updateStatusById(Integer id,String status){
         orderRepository.updateStatusById(id,status);
     }
+    public void updateTotalAmountById(Integer id ,Integer amount){
+        orderRepository.updateTotalAmountById(id,amount);
+    }
 
     public void addOrder(Integer user_id,Integer total_amount,String status){
         orderRepository.addOrder(user_id,total_amount,status);

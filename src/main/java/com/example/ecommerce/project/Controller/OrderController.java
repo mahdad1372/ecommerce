@@ -17,6 +17,10 @@ public class OrderController {
     public void updateOrder(@RequestBody Orders orders){
         orderservice.updateStatusById(orders.getOrder_id(),orders.getStatus());
     }
+    @PutMapping("/updateorder/amount")
+    public void updateOrderAmount(@RequestBody Orders orders){
+        orderservice.updateTotalAmountById(orders.getOrder_id(),orders.getTotal_amount());
+    }
     @GetMapping("/getorders")
     public List<Orders> getOrders(){
         return orderservice.getAllOrders();
