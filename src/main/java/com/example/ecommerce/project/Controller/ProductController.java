@@ -6,7 +6,6 @@ import com.example.ecommerce.project.Service.Categoryservice;
 import com.example.ecommerce.project.Service.Productservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 @RestController
 public class ProductController {
@@ -24,13 +23,13 @@ public class ProductController {
     public void deleteproduct(@RequestBody Products products) {
         productservice.deleteproductbyId(products.getProduct_id());
     }
-    @GetMapping("/getcategory/{id}")
+    @GetMapping("/getproduct/{id}")
     public List<Products> getcategorybyId(@PathVariable("id") Integer id){
         return productservice.getProductById(id);
     }
     @PostMapping("/addProduct")
     public void postDetails(@RequestBody Products products){
-        productservice.addProduct(products.getName(),products.getDescription(),products.getPrice(),
-                products.getCategory_id());
+        productservice.addProduct(products.getName(),products.getDescription(),products.getPrice()
+                ,products.getStock_quantity(),products.getCategory_id());
     }
 }

@@ -25,8 +25,8 @@ public class Productservice {
         productRepository.updateproductById(id,name);
     }
 
-    public void addProduct(String name,String description,Integer price,Integer category_id){
-        productRepository.addProduct(name,description,price, category_id);
+    public void addProduct(String name,String description,Integer price,Integer stock_quantity,Integer category_id){
+        productRepository.addProduct(name,description,price,stock_quantity, category_id);
     }
 }
 

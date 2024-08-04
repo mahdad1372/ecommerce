@@ -31,7 +31,7 @@ public interface ProductRepository extends JpaRepository<Products,Integer> {
     @Transactional
     @Query(
             value =
-                    "INSERT INTO Products (name,description,price, category_id) values (?1,?2,?3,?4)",
+                    "INSERT INTO Products (name,description,price,stock_quantity, category_id) values (?1,?2,?3,?4,?5)",
             nativeQuery = true)
-    void addProduct(String name,String description,Integer price,Integer category_id);
+    void addProduct(String name,String description,Integer price,Integer stock_quantity,Integer category_id);
 }
