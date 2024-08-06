@@ -25,8 +25,8 @@ public class Paymentservice {
         paymentRepository.updatePaymentById(id,payment_method);
     }
 
-    public void addOrder(Integer user_id,String payment_method,String status){
-        paymentRepository.addPayment(user_id,payment_method,status);
+    public void addPayment(Integer order_id,String payment_method,String status){
+        paymentRepository.addPayment(order_id,payment_method,status);
     }
 }
 
