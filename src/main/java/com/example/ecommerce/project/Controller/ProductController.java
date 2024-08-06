@@ -1,8 +1,6 @@
 package com.example.ecommerce.project.Controller;
 
-import com.example.ecommerce.project.Entity.Categories;
-import com.example.ecommerce.project.Entity.Products;
-import com.example.ecommerce.project.Service.Categoryservice;
+import com.example.ecommerce.project.Entity.Products;;
 import com.example.ecommerce.project.Service.Productservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

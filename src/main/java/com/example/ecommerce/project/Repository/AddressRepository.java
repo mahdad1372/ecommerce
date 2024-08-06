@@ -1,6 +1,5 @@
 package com.example.ecommerce.project.Repository;
 import com.example.ecommerce.project.Entity.Addresses;
-import com.example.ecommerce.project.Entity.Products;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

@@ -1,13 +1,8 @@
 package com.example.ecommerce.project.Controller;
 
 import com.example.ecommerce.project.Entity.Categories;
-import com.example.ecommerce.project.Entity.Users;
 import com.example.ecommerce.project.Service.Categoryservice;
-import com.example.ecommerce.project.Service.Userservice;
-import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
