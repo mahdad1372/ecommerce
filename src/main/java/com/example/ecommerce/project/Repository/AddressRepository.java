@@ -32,5 +32,5 @@ public interface AddressRepository extends JpaRepository<Addresses,Integer> {
                     "INSERT INTO Addresses (user_id,street,city,state, postal_code,country) values (?1,?2,?3,?4,?5,?6)",
             nativeQuery = true)
     void addAddress(Integer user_id,String street,String city,String state,Integer postal_code,
-                    Integer country);
+                    String country);
 }
