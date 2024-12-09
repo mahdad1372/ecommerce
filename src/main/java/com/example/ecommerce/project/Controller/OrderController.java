@@ -24,10 +24,10 @@ public class OrderController {
     public void deleteOrderById(@PathVariable("id") Integer id) {
         orderservice.deleteOrderByOrderId(id);
     }
-    @GetMapping("/getproduct/{id}")
-    public List<Orders> getcategorybyId(@PathVariable("id") Integer id){
-        return orderservice.getOrdersById(id);
-    }
+//    @GetMapping("/getproduct/{id}")
+//    public List<Orders> getcategorybyId(@PathVariable("id") Integer id){
+//        return orderservice.getOrdersById(id);
+//    }
     @PostMapping("/addOrder")
     public void addOrder(@RequestBody Orders orders){
         orderservice.addOrder(orders.getUser_id(),orders.getTotal_amount(),orders.getStatus());
