@@ -29,6 +29,6 @@ public class CategoryController {
     }
     @PostMapping("/addcategory")
     public void postDetails(@RequestBody Categories category){
-        categoryservice.addCategory(category.getName(),category.getDescription());
+        categoryservice.addCategory(category.getCategory_id(),category.getName(),category.getDescription());
     }
 }

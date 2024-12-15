@@ -23,7 +23,7 @@ public class Categoryservice {
         categoryRepository.updatecategorybyId(id,name);
     }
 
-    public void addCategory(String name,String description){
-        categoryRepository.addcategory(name,description);
+    public void addCategory(Integer category_id ,String name,String description){
+        categoryRepository.addcategory(category_id,name,description);
     }
 }
